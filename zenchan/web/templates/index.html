@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#050805">
+  <meta name="description" content="Zen-chan: your local-first browsing awareness buddy">
+  <title>Zen-chan</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/static/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/static/icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap">
+  <link rel="stylesheet" href="/static/zen.css?v={{ version }}">
+</head>
+<body>
+  <header class="top">
+    <div class="brand" title="Zen-chan v{{ version }}">
+      <span class="logo">ZEN_CHAN</span><span class="cursor">_</span>
+    </div>
+    <div class="now" id="now" aria-live="polite">
+      <span class="face" id="now-face">(￣ー￣)</span>
+      <span class="line" id="now-line">waking up…</span>
+    </div>
+    <div class="controls">
+      <label class="sr-only" for="window">Time window</label>
+      <select id="window">
+        <option value="today">Today</option>
+        <option value="7d" selected>7 days</option>
+        <option value="30d">30 days</option>
+        <option value="all">All time</option>
+      </select>
+      <button id="refresh" class="btn" title="Sync all browsers and re-analyze">⟳ Sync</button>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs" role="tablist">
+    <button data-tab="buddy" class="active" role="tab">Buddy</button>
+    <button data-tab="identity" role="tab">Identity</button>
+    <button data-tab="patterns" role="tab">Patterns</button>
+    <button data-tab="map" role="tab">Map</button>
+    <button data-tab="sessions" role="tab">Sessions</button>
+    <button data-tab="sources" role="tab">Sources</button>
+    <button data-tab="settings" role="tab">Settings</button>
+  </nav>
+
+  <main id="main">
+    <section class="tab active" id="tab-buddy"></section>
+    <section class="tab" id="tab-identity"></section>
+    <section class="tab" id="tab-patterns"></section>
+    <section class="tab" id="tab-map"></section>
+    <section class="tab" id="tab-sessions"></section>
+    <section class="tab" id="tab-sources"></section>
+    <section class="tab" id="tab-settings"></section>
+  </main>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-box">
+      <div class="modal-title">&gt; syncing &amp; analyzing<span class="cursor">_</span></div>
+      <pre class="terminal" id="terminal"></pre>
+      <div class="progress"><div class="bar" id="progress-bar"></div></div>
+    </div>
+  </div>
+  <div class="toasts" id="toasts" aria-live="assertive"></div>
+
+  <script src="/static/charts.js?v={{ version }}"></script>
+  <script src="/static/app.js?v={{ version }}"></script>
+</body>
+</html>

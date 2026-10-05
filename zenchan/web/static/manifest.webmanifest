@@ -1,0 +1,16 @@
+{
+  "name": "Zen-chan — browsing awareness buddy",
+  "short_name": "Zen-chan",
+  "description": "See what you really do online, across every browser and device.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#030603",
+  "theme_color": "#030603",
+  "icons": [
+    {"src": "/static/icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "/static/icons/icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "/static/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

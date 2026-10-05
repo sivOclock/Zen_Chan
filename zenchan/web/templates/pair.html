@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050805">
+  <title>Pair with Zen-chan</title>
+  <link rel="stylesheet" href="/static/zen.css">
+</head>
+<body class="pair">
+  <main class="pair-box panel">
+    <h1>(・o・)? Who's there?</h1>
+    <p>This Zen-chan dashboard holds someone's browsing history, so other devices need a pairing token.</p>
+    <p>On the computer running Zen-chan, open <b>Sources → Pair a phone</b> and scan the QR code, or paste the token here:</p>
+    <form method="get" action="/">
+      <label for="token">Pairing token</label>
+      <input id="token" name="token" autocomplete="off" required>
+      <button class="btn" type="submit">Pair this device</button>
+    </form>
+  </main>
+</body>
+</html>
